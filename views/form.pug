@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='style.css')
+  title Document
+h2 Address Book
+#navigation
+  ul.nav-list
+    li#js-show-all Show all Contacts
+    li#js-search Search
+    li#js-add-new Add New Contact
+#search-panel.panel
+  h1 Search Contacts
+  form#search(action='#')
+    #results
+    div
+      label
+        input#search(type='text', name='search', placeholder='Enter name of contact')
+    input(type='submit', value='Submit')
+#contact-panel.panel
+  form#contact(action='#')
+    h1 Add a new contact
+    div
+      label
+        input#name(type='text', name='person', placeholder='John Smith')
+      label
+        input#name(type='text', name='phone', placeholder='1234567')
+      label
+        input#name(type='text', name='email', placeholder='john@example.com')
+    div
+      input(type='submit', value='Submit')
+#show-panel.panel
+script(src='./phonebook.js')
